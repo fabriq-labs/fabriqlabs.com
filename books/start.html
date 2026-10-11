@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Close my books — Fabriq Bookkeeping</title>
+  <meta name="description" content="Tell us where the books live. We read it and write back. You will not get a login." />
+  <link rel="icon" href="media/fabriq-logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;1,8..60,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="close.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="bar">
+    <a class="mark" href="index.html">fabriq <em>books</em></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary">Menu</button>
+    <nav id="primary" aria-label="Primary">
+      <div class="menu">
+        <button type="button" aria-expanded="false" aria-controls="menu-product">Product</button>
+        <div class="panel" id="menu-product" hidden>
+          <ul>
+            <li>AI categorization</li>
+            <li>Document capture</li>
+            <li>Agentic reconciliation</li>
+            <li>Accounts payable</li>
+            <li>Agentic close</li>
+            <li>Connectors</li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu">
+        <button type="button" aria-expanded="false" aria-controls="menu-solutions">Solutions</button>
+        <div class="panel" id="menu-solutions" hidden>
+          <ul>
+            <li>Businesses</li>
+            <li>Bookkeeping and accounting firms</li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu">
+        <button type="button" aria-expanded="false" aria-controls="menu-integrations">Integrations</button>
+        <div class="panel" id="menu-integrations" hidden>
+          <div class="group">
+            <p class="subhead">Ledgers</p>
+            <ul>
+              <li>QuickBooks</li>
+              <li>Zoho Books</li>
+              <li>Xero</li>
+            </ul>
+          </div>
+          <div class="group">
+            <p class="subhead">Banks</p>
+            <ul>
+              <li>Plaid</li>
+            </ul>
+          </div>
+          <div class="group">
+            <p class="subhead">Accounts payable</p>
+            <ul>
+              <li>Bill.com</li>
+            </ul>
+          </div>
+          <div class="group">
+            <p class="subhead">Accounts receivable</p>
+            <ul>
+              <li>Salesforce</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a href="https://books.fabriqdata.com" target="_blank" rel="noopener noreferrer">Login</a>
+      <a class="btn" href="start.html">Close my books</a>
+    </nav>
+  </header>
+
+  <main id="main" class="page">
+    <h1>Close my books.</h1>
+    <p class="lede">We read it and write back. You will not get a login.</p>
+
+    <form id="close-form" class="form" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required />
+        <p class="error" role="alert"></p>
+      </div>
+      <div class="field">
+        <label for="email">Work email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required />
+        <p class="error" role="alert"></p>
+      </div>
+      <div class="field">
+        <label for="company">Company</label>
+        <input id="company" name="company" type="text" autocomplete="organization" required />
+        <p class="error" role="alert"></p>
+      </div>
+      <div class="field">
+        <label for="who">This request is for</label>
+        <select id="who" name="who" required>
+          <option value="business">A business</option>
+          <option value="firm">A bookkeeping or accounting firm</option>
+        </select>
+        <p class="error" role="alert"></p>
+      </div>
+      <div class="field">
+        <label for="ledger">Where the books live</label>
+        <select id="ledger" name="ledger" required>
+          <option value="">Choose one</option>
+          <option>QuickBooks</option>
+          <option>Xero</option>
+          <option>Zoho Books</option>
+          <option>Something else</option>
+        </select>
+        <p class="error" role="alert"></p>
+      </div>
+      <div class="field">
+        <label for="companies">How many companies</label>
+        <select id="companies" name="companies" required>
+          <option value="">Choose one</option>
+          <option>1</option>
+          <option>2–3</option>
+          <option>More than 3</option>
+        </select>
+        <p class="error" role="alert"></p>
+      </div>
+      <div class="field">
+        <label for="behind">How far behind</label>
+        <select id="behind" name="behind" required>
+          <option value="">Choose one</option>
+          <option>This month is open</option>
+          <option>About a month</option>
+          <option>A few months</option>
+          <option>I'm not sure</option>
+        </select>
+        <p class="error" role="alert"></p>
+      </div>
+      <div class="field">
+        <label for="messy">What is messy <span class="quiet">(optional)</span></label>
+        <textarea id="messy" name="messy"></textarea>
+        <p class="error" role="alert"></p>
+      </div>
+      <p class="note">This opens an email to hello@fabriqdata.com. We read it and write back.</p>
+      <button class="btn" type="submit">Close my books</button>
+    </form>
+  </main>
+
+  <footer class="colophon">
+    <a class="mark" href="index.html">fabriq <em>books</em></a>
+    <div class="colophon-links">
+      <span>© 2026 fabriq labs, Inc.</span>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="https://www.linkedin.com/company/fabriq-labs" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+    </div>
+  </footer>
+  <script src="close.js"></script>
+</body>
+</html>

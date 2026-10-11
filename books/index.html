@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fabriq Bookkeeping — Every month closed</title>
+  <meta name="description" content="We keep the books for companies on QuickBooks, Xero, or Zoho. AI categorization, document capture, reconciliation, and an agentic close — you approve what posts." />
+  <link rel="icon" href="media/fabriq-logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;1,8..60,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="close.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="bar">
+    <a class="mark" href="index.html">fabriq <em>books</em></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary">Menu</button>
+    <nav id="primary" aria-label="Primary">
+      <div class="menu">
+        <button type="button" aria-expanded="false" aria-controls="menu-product">Product</button>
+        <div class="panel" id="menu-product" hidden>
+          <ul>
+            <li>AI categorization</li>
+            <li>Document capture</li>
+            <li>Agentic reconciliation</li>
+            <li>Accounts payable</li>
+            <li>Agentic close</li>
+            <li>Connectors</li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu">
+        <button type="button" aria-expanded="false" aria-controls="menu-solutions">Solutions</button>
+        <div class="panel" id="menu-solutions" hidden>
+          <ul>
+            <li>Businesses</li>
+            <li>Bookkeeping and accounting firms</li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu">
+        <button type="button" aria-expanded="false" aria-controls="menu-integrations">Integrations</button>
+        <div class="panel" id="menu-integrations" hidden>
+          <div class="group">
+            <p class="subhead">Ledgers</p>
+            <ul>
+              <li>QuickBooks</li>
+              <li>Zoho Books</li>
+              <li>Xero</li>
+            </ul>
+          </div>
+          <div class="group">
+            <p class="subhead">Banks</p>
+            <ul>
+              <li>Plaid</li>
+            </ul>
+          </div>
+          <div class="group">
+            <p class="subhead">Accounts payable</p>
+            <ul>
+              <li>Bill.com</li>
+            </ul>
+          </div>
+          <div class="group">
+            <p class="subhead">Accounts receivable</p>
+            <ul>
+              <li>Salesforce</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a href="https://books.fabriqdata.com" target="_blank" rel="noopener noreferrer">Login</a>
+      <a class="btn" href="start.html">Close my books</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <h1>
+        <span>Every bill coded.</span>
+        <span>Every account reconciled.</span>
+        <span>Every month closed.</span>
+      </h1>
+
+      <div class="stage-wrap hero-frame">
+        <div class="hero-crop">
+          <video class="hero-video" autoplay muted loop playsinline poster="media/hero-poster.jpg">
+            <source src="media/hero.mp4" type="video/mp4">
+          </video>
+        </div>
+        <aside class="hero-float hero-float-net">
+          <p>March</p>
+          <ul>
+            <li><span>Revenue</span><span>$128,400</span></li>
+            <li><span>Expenses</span><span>$91,200</span></li>
+            <li><span>Net</span><span>$37,200</span></li>
+          </ul>
+        </aside>
+        <aside class="hero-float hero-float-sync">
+          <p>Last sync</p>
+          <ul>
+            <li><span>QuickBooks</span><span>12 min ago</span></li>
+            <li><span>Salesforce</span><span>26 min ago</span></li>
+            <li><span>Bill.com</span><span>1 hr ago</span></li>
+          </ul>
+        </aside>
+        <p class="hero-float hero-float-ready">March P&amp;L ready</p>
+      </div>
+    </section>
+
+    <section class="work" id="work">
+      <h2>How we close the month</h2>
+      <div class="cards">
+        <article>
+          <h3>AI categorization</h3>
+          <p>Spending is coded as it lands. A bookkeeper checks what is not a clear match.</p>
+          <div class="screen">
+            <ul class="screen-rows predict">
+              <li><span>ADOBE *ADOBE 03-02 408-536-6000 CA 4412</span><em>Software</em><b>$26.33</b></li>
+              <li><span>OFFICE DEPOT 00 03-04 4412</span><em>Office Expenses</em><b>$16.44</b></li>
+              <li><span>UNITED AIR 016239 03-11 DENVER CO 4412</span><em>Travel</em><b>$386.40</b></li>
+              <li><span>FEDWIRE TRN:1011A1B2C3D4 ORG:ACME IND</span><em>Sales Income</em><b>$450.00</b></li>
+            </ul>
+          </div>
+        </article>
+        <article>
+          <h3>Document capture</h3>
+          <p>The bill is read from the PDF. The month does not start with retyping.</p>
+          <div class="screen screen-capture">
+            <div class="capture">
+              <figure class="capture-pdf">
+                <img src="media/northwind-supply.jpg" alt="Northwind Supply invoice 1048, dated April 18, 2026, total $2,150.00" width="864" height="1152" />
+              </figure>
+              <ol class="capture-lines">
+                <li><span>Corrugated cartons</span><b>$1,600.00</b><em>Supplies &amp; Materials - COGS</em></li>
+                <li><span>Packing labels</span><b>$400.00</b><em>Supplies &amp; Materials - COGS</em></li>
+                <li><span>Shipping</span><b>$80.00</b><em>Shipping, Freight &amp; Delivery - COS</em></li>
+                <li><span>Sales tax</span><b>$70.00</b><em>Sales Tax Paid</em></li>
+                <li class="credit"><span>Northwind Supply</span><b>$2,150.00</b><em>Accounts Payable (A/P)</em></li>
+              </ol>
+            </div>
+          </div>
+        </article>
+        <article>
+          <h3>Agentic reconciliation</h3>
+          <p>The bank line is matched to the bill. A person approves the match.</p>
+          <div class="screen">
+            <ul class="screen-rows">
+              <li><span>Chase 4521</span><em>Bill 1044</em><b>$4,280</b></li>
+              <li><span>Amex 1004</span><em class="needs">Needs a receipt</em><b>$640</b></li>
+            </ul>
+          </div>
+        </article>
+        <article>
+          <h3>Accounts payable</h3>
+          <p>Open bills stay in the month until the payment clears.</p>
+          <div class="screen">
+            <ul class="screen-rows">
+              <li><span>Northwind Supply</span><em>Materials</em><b>$2,150</b></li>
+              <li><span>City Power</span><em>Due Apr 25</em><b>$418</b></li>
+            </ul>
+          </div>
+        </article>
+        <article>
+          <h3>Agentic close</h3>
+          <p>The month is laid out. You approve what hits the books.</p>
+          <div class="screen">
+            <ul class="screen-check">
+              <li><span>Code Amazon Web Services</span><i>Approve</i></li>
+              <li><span>Match Chase 4521</span><i>Approve</i></li>
+              <li><span>Amex 1004 receipt</span><i class="needs">Needs you</i></li>
+              <li><span>City Power bill</span><i>Approve</i></li>
+            </ul>
+          </div>
+        </article>
+        <article>
+          <h3>Connectors</h3>
+          <p>The books stay in your ledger. Banks, bills, and invoices sit beside them.</p>
+          <div class="screen screen-links">
+            <img src="media/connectors.png" alt="Banks, Bill.com, and Salesforce feed into Fabriq. QuickBooks connects both ways." width="1200" height="800" />
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="start" id="start">
+      <h2>Bring the month that is open.</h2>
+      <p>Tell us where the books live and how far behind they are.</p>
+      <a class="btn" href="start.html">Close my books</a>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <a class="mark" href="index.html">fabriq <em>books</em></a>
+    <div class="colophon-links">
+      <span>© 2026 fabriq labs, Inc.</span>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="https://www.linkedin.com/company/fabriq-labs" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+    </div>
+  </footer>
+  <script src="close.js"></script>
+</body>
+</html>

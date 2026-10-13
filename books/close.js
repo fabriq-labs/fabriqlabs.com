@@ -78,6 +78,9 @@
   var form = document.getElementById("close-form");
   if (!form) return;
 
+  var configured = window.FABRIQ_FORM && window.FABRIQ_FORM.endpoint;
+  if (configured) form.action = configured;
+
   function setError(field, message) {
     var slot = field.querySelector(".error");
     var input = field.querySelector("input, select, textarea");
@@ -112,21 +115,35 @@
       return;
     }
 
-    var data = new FormData(form);
-    var lines = [
-      "Name: " + data.get("name"),
-      "Work email: " + data.get("email"),
-      "Company: " + data.get("company"),
-      "This request is for: " + (data.get("who") === "firm" ? "A bookkeeping or accounting firm" : "A business"),
-      "Books live in: " + data.get("ledger"),
-      "Companies: " + data.get("companies"),
-      "How far behind: " + data.get("behind")
-    ];
-    var messy = (data.get("messy") || "").trim();
-    if (messy) lines.push("", "What's messy:", messy);
-    var href = "mailto:hello@fabriqdata.com?subject=" +
-      encodeURIComponent("Close my books") +
-      "&body=" + encodeURIComponent(lines.join("\n"));
-    window.location.href = href;
+    var gotcha = form.querySelector("[name=_gotcha]");
+    if (gotcha && gotcha.value) {
+      showDone();
+      return;
+    }
+
+    var endpoint = form.getAttribute("action") || "";
+    var sendError = document.getElementById("form-error");
+    if (!endpoint || endpoint.indexOf("YOUR_FORM_ID") !== -1) {
+      sendError.hidden = false;
+      sendError.focus();
+      return;
+    }
+
+    var back = new URL(window.location.href);
+    back.searchParams.set("sent", "1");
+    var thanks = form.querySelector("[name=thanks]");
+    if (thanks) thanks.value = back.toString();
+
+    sendError.hidden = true;
+    HTMLFormElement.prototype.submit.call(form);
   });
+
+  function showDone() {
+    form.hidden = true;
+    var done = document.getElementById("form-done");
+    done.hidden = false;
+    done.focus();
+  }
+
+  if (new URLSearchParams(window.location.search).get("sent") === "1") showDone();
 })();

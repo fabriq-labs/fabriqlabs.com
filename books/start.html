@@ -79,10 +79,10 @@
     <h1>Close my books.</h1>
     <p class="lede">We read it and write back. You will not get a login.</p>
 
-    <form id="close-form" class="form" novalidate>
+    <form id="close-form" class="form" action="" method="post" novalidate>
       <div class="field">
         <label for="name">Name</label>
-        <input id="name" name="name" type="text" autocomplete="name" required />
+        <input id="name" name="Name" type="text" autocomplete="name" required />
         <p class="error" role="alert"></p>
       </div>
       <div class="field">
@@ -92,20 +92,20 @@
       </div>
       <div class="field">
         <label for="company">Company</label>
-        <input id="company" name="company" type="text" autocomplete="organization" required />
+        <input id="company" name="Company" type="text" autocomplete="organization" required />
         <p class="error" role="alert"></p>
       </div>
       <div class="field">
         <label for="who">This request is for</label>
-        <select id="who" name="who" required>
-          <option value="business">A business</option>
-          <option value="firm">A bookkeeping or accounting firm</option>
+        <select id="who" name="This request is for" required>
+          <option>A business</option>
+          <option>A bookkeeping or accounting firm</option>
         </select>
         <p class="error" role="alert"></p>
       </div>
       <div class="field">
         <label for="ledger">Where the books live</label>
-        <select id="ledger" name="ledger" required>
+        <select id="ledger" name="Where the books live" required>
           <option value="">Choose one</option>
           <option>QuickBooks</option>
           <option>Xero</option>
@@ -116,7 +116,7 @@
       </div>
       <div class="field">
         <label for="companies">How many companies</label>
-        <select id="companies" name="companies" required>
+        <select id="companies" name="How many companies" required>
           <option value="">Choose one</option>
           <option>1</option>
           <option>2–3</option>
@@ -126,7 +126,7 @@
       </div>
       <div class="field">
         <label for="behind">How far behind</label>
-        <select id="behind" name="behind" required>
+        <select id="behind" name="How far behind" required>
           <option value="">Choose one</option>
           <option>This month is open</option>
           <option>About a month</option>
@@ -137,12 +137,20 @@
       </div>
       <div class="field">
         <label for="messy">What is messy <span class="quiet">(optional)</span></label>
-        <textarea id="messy" name="messy"></textarea>
+        <textarea id="messy" name="What is messy"></textarea>
         <p class="error" role="alert"></p>
       </div>
-      <p class="note">This opens an email to hello@fabriqdata.com. We read it and write back.</p>
+      <div class="hp" aria-hidden="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">
+        <label for="gotcha">Leave this blank</label>
+        <input id="gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
+      </div>
+      <input type="hidden" name="_subject" value="Close my books" />
+      <input type="hidden" name="thanks" value="" />
+      <p class="note">This goes to hello@fabriqdata.com. We read it and write back.</p>
+      <p class="send-error" id="form-error" role="alert" hidden>That did not send. Email <a href="mailto:hello@fabriqdata.com">hello@fabriqdata.com</a> and we will write back.</p>
       <button class="btn" type="submit">Close my books</button>
     </form>
+    <p class="done" id="form-done" tabindex="-1" hidden>We have it. We'll write back.</p>
   </main>
 
   <footer class="colophon">
@@ -154,6 +162,7 @@
       <a href="https://www.linkedin.com/company/fabriq-labs" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
     </div>
   </footer>
+  <script src="form.config.js"></script>
   <script src="close.js"></script>
 </body>
 </html>
